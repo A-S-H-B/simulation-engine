@@ -107,18 +107,18 @@ lift_required = 9.8*total_mass
 drag = lift_required/ld_ratio
 power_required = drag*speed_choice/3.6
 power_required = power_required/motor_power_efficiency/propulsive_efficiency
-power_deficit_per_ld_ratio = power_required-all_motor_eff_power
+power_deficit_per_ld_ratio = all_motor_eff_power-power_required
 
 cruising_time = range_choice/speed_choice
 cruising_work_required = power_required*cruising_time
 takeoff_work_required = all_motor_max_power*takeoff_time
 total_work_required = takeoff_work_required+cruising_work_required
 
-battery_capacity_deficit = total_work_required-battery_pack_capacity
+battery_capacity_deficit = battery_pack_capacity-total_work_required
 
 #Method 2: rule of thumb
 ideal_power_per_rule_of_thumb = total_mass*rule_of_thumb
-power_deficit_per_rule_of_thumb = ideal_power_per_rule_of_thumb-all_motor_max_power
+power_deficit_per_rule_of_thumb = all_motor_max_power-ideal_power_per_rule_of_thumb
 
 st.write(f"Motor Power Surplus/Deficit per L/D ratio: {str(round(power_deficit_per_ld_ratio))} Watts")
 st.write(f"Battery Capacity Surplus/Deficit per L/D ratio {str(round(battery_capacity_deficit))} Watt-hours")
