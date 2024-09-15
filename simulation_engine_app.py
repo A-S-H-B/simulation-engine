@@ -13,14 +13,18 @@ st.markdown("Step 3: Start manipulating 'Number of Motors' and 'Battery Parallel
 st.subheader('''Aircraft's Desired Parameters''')
 
 excel_file = 'aviation_data.xlsx'
+battery_file = 'batteries.csv'
+motors_file = 'motors.csv'
 sheet_list = ["motors", "batteries"]
 
-dataframes = {}
-for sheet in sheet_list:
-    dataframes[sheet] = pd.read_excel(excel_file, sheet_name=sheet)
+#dataframes = {}
+#for sheet in sheet_list:
+#    dataframes[sheet] = pd.read_excel(excel_file, sheet_name=sheet)
 
-motors_df = dataframes["motors"]
-batteries_df = dataframes["batteries"]
+#motors_df = dataframes["motors"]
+#batteries_df = dataframes["batteries"]
+motors_df = pd.read_csv(motors_file)
+batteries_df = pd.read_csv(batteries_file)
 dataframes_list = [motors_df, batteries_df]
 
 propulsion_motor_choices = []
@@ -125,6 +129,5 @@ st.write(f"Battery Capacity Surplus/Deficit per L/D ratio {str(round(battery_cap
 st.write(f"Motor Power Surplus/Deficit per rule of thumb: {str(round(power_deficit_per_rule_of_thumb))} Watts")
 
 if submitted_or_not:
-    st.write("Submitted form. ")
-    st.write("This message will disappear when you start estimating Performance.")
-st.write(f"Time of latest Performance Estimate: {time.strftime("%H:%M:%S")}")
+    st.write("Submitted form. This message will disappear when you start estimating Performance.")
+st.write(f"Time of latest performance estimate: {time.strftime("%H:%M:%S")}")
