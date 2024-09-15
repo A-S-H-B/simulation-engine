@@ -52,10 +52,10 @@ battery_choice = performance_form.selectbox(
     "Select battery cell:",
     battery_choices
 )
-airframe_mass_choice = performance_form.number_input("Airframe Mass in kg: ", min_value=0)
-payload_choice = performance_form.number_input("Payload in kg: ", step=10, min_value=0)
-range_choice = performance_form.number_input("Range in km: ", step=10, min_value=0)
-speed_choice = performance_form.number_input("Speed in km/h: ", step=5, min_value=0)
+airframe_mass_choice = performance_form.number_input("Airframe Mass in kg: ", min_value=1)
+payload_choice = performance_form.number_input("Payload in kg: ", step=10, min_value=10)
+range_choice = performance_form.number_input("Range in km: ", step=10, min_value=10)
+speed_choice = performance_form.number_input("Speed in km/h: ", step=5, min_value=5)
 submitted_or_not = performance_form.form_submit_button(label="Submit Parameters")
 
 st.subheader('Performance Assumptions')
