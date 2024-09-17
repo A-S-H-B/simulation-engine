@@ -24,7 +24,7 @@ sheet_list = ["motors", "batteries"]
 #motors_df = dataframes["motors"]
 #batteries_df = dataframes["batteries"]
 motors_df = pd.read_csv(motors_file)
-batteries_df = pd.read_csv(batteries_file)
+batteries_df = pd.read_csv(battery_file)
 dataframes_list = [motors_df, batteries_df]
 
 propulsion_motor_choices = []
