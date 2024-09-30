@@ -32,7 +32,7 @@ battery_choices = []
 
 def obtain_row_count(dataframe):
     count, _ = dataframe.shape
-    count = count-1
+    #count = count-1
     return count
 
 row_count_motors = obtain_row_count(motors_df)
