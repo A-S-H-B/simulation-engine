@@ -130,6 +130,7 @@ st.write(f"Motor Power Surplus/Deficit per rule of thumb: {str(round(power_defic
 
 st.write(f"Simulated Battery Configuration: {required_cells_series}s{parallel_multiple}p")
 st.write(f"Simulated Battery Mass: {battery_pack_mass}")
+st.write(f"Simulated Total Aircraft Mass: {total_mass}")
 
 if submitted_or_not:
     st.write("Submitted form. This message will disappear when you start estimating Performance.")
