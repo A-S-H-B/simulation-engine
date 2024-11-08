@@ -128,6 +128,9 @@ st.write(f"Motor Power Surplus/Deficit per L/D ratio: {str(round(power_deficit_p
 st.write(f"Battery Capacity Surplus/Deficit per L/D ratio {str(round(battery_capacity_deficit))} Watt-hours")
 st.write(f"Motor Power Surplus/Deficit per rule of thumb: {str(round(power_deficit_per_rule_of_thumb))} Watts")
 
+st.write(f"Simulated Battery Configuration: {required_cells_series}s{parallel_multiple}p")
+st.write(f"Simulated Battery Mass: {battery_pack_mass}")
+
 if submitted_or_not:
     st.write("Submitted form. This message will disappear when you start estimating Performance.")
 st.write(f"Time of latest performance estimate: {time.strftime("%H:%M:%S")}")
