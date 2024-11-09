@@ -128,9 +128,9 @@ st.write(f"Motor Power Surplus/Deficit per L/D ratio: {str(round(power_deficit_p
 st.write(f"Battery Capacity Surplus/Deficit per L/D ratio {str(round(battery_capacity_deficit))} Watt-hours")
 st.write(f"Motor Power Surplus/Deficit per rule of thumb: {str(round(power_deficit_per_rule_of_thumb))} Watts")
 
-st.write(f"Simulated Battery Configuration: {required_cells_series}s{parallel_multiple}p")
-st.write(f"Simulated Battery Mass: {battery_pack_mass}")
-st.write(f"Simulated Total Aircraft Mass: {total_mass}")
+st.write(f"Simulated Battery Configuration: {round(required_cells_series)}s{parallel_multiple}p")
+st.write(f"Simulated Battery Mass: {round(battery_pack_mass, 2)}")
+st.write(f"Simulated Total Aircraft Mass: {round(total_mass, 2)}")
 
 if submitted_or_not:
     st.write("Submitted form. This message will disappear when you start estimating Performance.")
