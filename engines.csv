@@ -1,0 +1,4 @@
+Engine,Thrust_N,SFC_kg_per_N_hr,SFC_kg_per_kN_hr,Mass_kg
+PBS TJ200,2000,0.12,,17
+Williams F107,1900,,69.6,30
+SinoHawk Power HF500,4900,0.65,,100
